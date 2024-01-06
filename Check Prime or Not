@@ -1,0 +1,23 @@
+#include<stdio.h>
+int prime(int n)
+{
+	static int i=2;
+	if(i<n)
+	{
+		if(n%i==0)
+			return 0;
+		else
+		{
+			i++;
+			prime(n);
+		}
+	}
+	return 1;
+}
+int main()
+{
+	if(prime(12)==1)
+		printf("Number is Prime");
+	else
+		printf("Number is not Prime");
+}
